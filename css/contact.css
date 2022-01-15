@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0; padding: 0;box-sizing: border-box;
+}
+
+header{
+    width: 100%; 
+    height: 7vh; /* for the second part it needs to be minimum*/
+    background-image: linear-gradient(rgba(114, 112, 112, 0.212),rgba(66, 66, 66, 0.425)), url('../image/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    width: 100%; 
+    height: 7vh;
+    background: rgb(0 0 0 / 54%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    padding-top:10px;
+    width: 25%;
+    text-align: center; 
+    color:crimson;
+    font-size:25px;
+    letter-spacing: 1.3px;
+    font-family: 'Superficious', sans-serif;
+}
+nav .bounce_logo{
+    animation-name:bounce;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-delay: .2s;
+    animation-timing-function: linear;
+    /* animation-direction: reverse; */
+}
+
+@keyframes bounce {
+    20%, 50%, 80%, to{
+        transform: translateX(0);
+    }
+    40%{
+        transform: translateX(-25px);
+    }
+    65%{
+        transform: translateX(-15px);
+    }
+    85%{
+        transform: translateX(-5px);
+    }
+}
+
+nav .menu{
+    width: 60%;
+    display: flex;
+    justify-content: space-around; 
+    padding: 1px 1px;
+    margin:10px;
+    
+}
+
+nav .menu a{
+    width: 25%;
+    height: 100%;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* padding: 5px; */
+
+}
+
+nav .menu a:hover{ 
+    color:rgb(141, 122, 194);  
+}
+
+nav .menu a.active{
+    color:crimson;
+    border-radius: 4px;
+    background-color: white;
+}
+
+
+.contact{
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(114, 112, 112, 0.212),rgba(66, 66, 66, 0.425)), url('../image/home.jpg');
+    height: 93vh;
+    font-family: 'Poppins', sans-serif;
+}
+.max-width{
+    max-width: 100%;
+    padding: 15px 80px;
+    margin: auto;
+}
+.contact .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    color:white;
+}
+.contact .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+}
+.contact .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    padding: 0 5px;
+    background: crimson;
+    transform: translateX(-50%);
+    content: "get in touch";
+}
+
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .contact-content .column{
+     width: calc(50% - 50px); /*column ta duiside theke kottuk gap nitese
+ */
+}
+.contact .contact-content .left{
+   padding-left: 120px; 
+}
+
+@media only screen and (max-width:1500px) {
+    .contact .contact-content .left{
+        padding-left: 50px; 
+     }
+     
+  }
+
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color:rgb(255, 255, 255);
+}
+.contact .contact-content .left p{
+    text-align: justify;
+    color:rgb(242, 243, 167);
+}
+.contact .contact-content .left .icons{
+    margin: 40px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head{
+    font-weight: 900;
+    color: rgb(148, 79, 79);
+}
+.contact .contact-content .info .sub-title{
+    color: rgb(214, 211, 211);
+    font-size: 14px;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+::placeholder{ 
+    color: white;
+    opacity: 1; 
+  } 
+
+.selection{
+    color: white;
+    background-color: rgba(46, 45, 45, 0.459);
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+select option{
+    background-color:rgb(0 0 0 / 54%);
+}
+
+.field input,
+.textarea textarea{
+    height: 100%;
+    width: 100%;
+    color: white;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background-color: rgba(46, 45, 45, 0.459);
+}
+
+.field input:focus,
+.field select:focus,
+.textarea textarea:focus{
+    border-color: rgb(3, 3, 3);
+    transform: scaleY(1.15);
+}
+.textarea textarea{
+  padding-top: 10px;
+  resize: none;
+  
+}
+.button-area button{
+  color: rgb(253, 253, 253);
+  width: 160px;
+  height: 45px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #3837376b;
+  border: 2px solid #8a8889;
+}
+.right form .button-area button:hover{
+  color: rgb(253, 253, 253);
+  background: rgb(3, 3, 3);
+  border: 2px solid rgb(3, 3, 3);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }

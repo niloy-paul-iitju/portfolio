@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            ContactPage
+        </title>
+        <link rel="icon" type="image/x-icon" href="../image/niloy-4.png">
+        <link rel="stylesheet" type="text/css" href="../css/contact.css">
+        <link href="http://fonts.cdnfonts.com/css/superficious" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav id="navbar">
+                <div class="logo">
+                    <h1 class="bounce_logo">Technoisseur</h1>
+                </div>
+
+                <div class="menu">
+                    <a href="home.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="service.html">Services</a>
+                    <a href="project.html">Project</a> 
+                    <a class="active" href="#">Contact</a>
+                </div>
+            </nav>
+        </header>
+                
+        <section class="contact">
+        <div class="max-width">
+            <h2 class="title">Contact me</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <p>For any kind of query feel free to knock me.</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Niloy Paul</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Gerua, Savar, Dhaka</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">niloycontact12@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Send a Message</div>
+                    <form class="form" action="home.html">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" placeholder="Name" id="name" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" placeholder="Email" id="email" required>
+                            </div>
+                        </div>
+                            <div class="field">
+                            <select class="selection" name="service" id="service">
+                                <option value="service">--Service Name--</option>
+                                <option value="Application Design">Application Design</option>
+                                <option value="Graphics Design">Graphics Design</option>
+                                <option value="Website Design">Website Design</option>
+                              </select>
+                            </div>
+                        
+                            <div class="field">
+                            <input type="text" placeholder="Subject" id="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" id="text" placeholder="Message.." required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button onclick="return emptyCheck()" type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+               
+            
+
+       
+
+    <script src="../javascript/script3.js"></script>
+    </body>
+</html>
